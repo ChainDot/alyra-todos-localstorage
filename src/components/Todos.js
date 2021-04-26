@@ -40,9 +40,11 @@ const Todos = ({ darkMode, setDarkMode }) => {
 
   useEffect(() => {
     document.title =
-      completedCount.length === 0
+      completedCount === todos.length
         ? "Que devez vous faire aujourd'hui ?"
-        : `Vous avez ${completedCount.length} tâches à accomplir !`;
+        : `Vous avez encore ${
+            todos.length - completedCount
+          } tâches à accomplir !`;
   });
 
   useEffect(() => {
@@ -98,6 +100,7 @@ const Todos = ({ darkMode, setDarkMode }) => {
     : "border-dark";
 
   const completedCount = todos.filter((el) => el.isCompleted).length;
+  console.log(completedCount);
   return (
     <main className>
       <div className="d-flex justify-content-center gap-5">
