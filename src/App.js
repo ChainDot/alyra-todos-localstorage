@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import Todos from "./components/Todos";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(() =>
-    JSON.parse(localStorage.getItem("myMode"))
+  const [darkMode, setDarkMode] = useState(
+    () => JSON.parse(localStorage.getItem("myMode")) || false
   );
   const onChange = darkMode ? "bg-dark text-white" : "bg-light";
 

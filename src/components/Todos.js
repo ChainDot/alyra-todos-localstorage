@@ -40,9 +40,9 @@ const Todos = ({ darkMode, setDarkMode }) => {
 
   useEffect(() => {
     document.title =
-      todos.length === 0
+      completedCount.length === 0
         ? "Que devez vous faire aujourd'hui ?"
-        : `Vous avez ${todos.length} tâches à accomplir !`;
+        : `Vous avez ${completedCount.length} tâches à accomplir !`;
   });
 
   useEffect(() => {
