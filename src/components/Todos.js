@@ -34,7 +34,7 @@ const initialTodos = [
 
 const Todos = ({ darkMode, setDarkMode }) => {
   const [todos, setTodos] = useState(
-    () => JSON.parse(localStorage.getItem("myToDoList")) || []
+    () => JSON.parse(localStorage.getItem("myToDoList")) || [initialTodos]
   );
   const [filter, setFilter] = useState("all");
 
