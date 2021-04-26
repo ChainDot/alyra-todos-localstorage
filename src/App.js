@@ -12,7 +12,7 @@ const App = () => {
   }, [darkMode]);
 
   return (
-    <div className={` App min-vh-100 ${onChange}`}>
+    <div className={`min-vh-100 ${onChange}`}>
       <div className="py-4 container">
         <h1 className="text-center">ToDos App</h1>
         <Todos darkMode={darkMode} setDarkMode={setDarkMode} />
